@@ -59,6 +59,7 @@ io.on('connection', (socket) => {
     socket.to(deletedTask.project._id).emit('task deleted', deletedTask)
   })
   socket.on('update task', (editedTask) => {
+    console.log(editedTask)
     socket.to(editedTask.project._id).emit('task updated', editedTask)
   })
 })
