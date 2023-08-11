@@ -283,8 +283,8 @@ export const sendSignUpEmail = async (data) => {
               
         <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
       <div align="left">
-        <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href='${process.env.FRONTEND_URL}/#/verify/${token}' style="height:52px; v-text-anchor:middle; width:205px;" arcsize="19%"  stroke="f" fillcolor="#818cf8"><w:anchorlock/><center style="color:#FFFFFF;"><![endif]-->
-          <a href='${process.env.FRONTEND_URL}/#/verify/${token}' target="_blank" class="v-button" style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #818cf8; border-radius: 10px;-webkit-border-radius: 10px; -moz-border-radius: 10px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;">
+        <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href='${process.env.FRONTEND_URL}/trackwave/#/verify/${token}' style="height:52px; v-text-anchor:middle; width:205px;" arcsize="19%"  stroke="f" fillcolor="#818cf8"><w:anchorlock/><center style="color:#FFFFFF;"><![endif]-->
+          <a href='${process.env.FRONTEND_URL}/trackwave/#/verify/${token}' target="_blank" class="v-button" style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #818cf8; border-radius: 10px;-webkit-border-radius: 10px; -moz-border-radius: 10px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;">
             <span style="display:block;padding:15px 40px;line-height:120%;"><span style="font-size: 18px; line-height: 21.6px;">Confirm Account</span></span>
           </a>
           <!--[if mso]></center></v:roundrect><![endif]-->
@@ -738,8 +738,8 @@ export const sendForgotPasswordEmail = async (data) => {
             
       <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
     <div align="left">
-      <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href='${process.env.FRONTEND_URL}/#/reset-password/${token}' style="height:52px; v-text-anchor:middle; width:205px;" arcsize="19%"  stroke="f" fillcolor="#818cf8"><w:anchorlock/><center style="color:#FFFFFF;"><![endif]-->
-        <a href='${process.env.FRONTEND_URL}/#/reset-password/${token}' target="_blank" class="v-button" style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #818cf8; border-radius: 10px;-webkit-border-radius: 10px; -moz-border-radius: 10px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;">
+      <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href='${process.env.FRONTEND_URL}/trackwave/#/reset-password/${token}' style="height:52px; v-text-anchor:middle; width:205px;" arcsize="19%"  stroke="f" fillcolor="#818cf8"><w:anchorlock/><center style="color:#FFFFFF;"><![endif]-->
+        <a href='${process.env.FRONTEND_URL}/trackwave/#/reset-password/${token}' target="_blank" class="v-button" style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #818cf8; border-radius: 10px;-webkit-border-radius: 10px; -moz-border-radius: 10px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;">
           <span style="display:block;padding:15px 40px;line-height:120%;"><span style="font-size: 18px; line-height: 21.6px;">Confirm Account</span></span>
         </a>
         <!--[if mso]></center></v:roundrect><![endif]-->

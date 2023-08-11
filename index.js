@@ -17,14 +17,17 @@ dotenv.config() // Access to .env file
 connectDB()
 
 // Allowed connections with CORS
-
-app.use(cors({
-  origin: '*',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  preflightContinue: false,
-  optionsSuccessStatus: 204,
-  credentials: true
-}))
+const whitelist = [process.env.FRONTEND_URL]
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error('Cors error :('))
+    }
+  }
+}
+app.use(cors(corsOptions))
 
 // Routing
 app.use('/api/users', userRoutes)
@@ -39,9 +42,7 @@ const server = app.listen(process.env.PORT, () => {
 const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: '*',
-    methods: ['GET', 'POST'],
-    credentials: true
+    origin: process.env.FRONTEND_URL
   }
 })
 
