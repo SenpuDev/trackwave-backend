@@ -21,7 +21,7 @@ connectDB()
 app.use(logRequests) // Show all connections sent to backend
 
 // Allowed connections with CORS
-const whitelist = [process.env.FRONTEND_URL]
+const whitelist = [process.env.FRONTEND_URL, process.env.METRICS]
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.includes(origin)) {
