@@ -10,6 +10,7 @@ import cors from 'cors'
 import { Server } from 'socket.io'
 
 const app = express()
+
 app.use(express.json()) // Enable json read in request
 
 dotenv.config() // Access to .env file
@@ -23,10 +24,11 @@ const corsOptions = {
     if (whitelist.includes(origin)) {
       callback(null, true)
     } else {
-      callback(new Error('Cors error, Connection not allowed:', origin))
+      callback(new Error(`Connection not allowed ${origin}...`))
     }
   }
 }
+
 app.use(cors(corsOptions))
 
 // Routing
