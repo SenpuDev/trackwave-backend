@@ -11,7 +11,7 @@ const connectDB = async () => {
     )
 
     const url = `${connection.connection.host}:${connection.connection.port}`
-    console.log(`MongoDB successful connected in : ${url} :)`)
+    // console.log(`MongoDB successful connected in : ${url} :)`)
   } catch (error) {
     console.log(`Error: ${error.message}`)
     process.exit(1)

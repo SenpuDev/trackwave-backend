@@ -83,7 +83,7 @@ export const deleteTask = async (req, res) => {
 
   validateId(id, res)
 
-  const task = await TaskModel.findById(id).populate('project') // Access to ref: 'project' and get
+  const task = await TaskModel.findById(id).populate('project').populate('lastUpdateBy', 'name email') // Access to ref: 'project' and get
 
   if (!task) {
     return res.status(404).json({ msg: 'Not found' })
