@@ -23,7 +23,7 @@ const corsOptions = {
     if (whitelist.includes(origin)) {
       callback(null, true)
     } else {
-      callback(new Error('Cors error :('))
+      callback(new Error('Cors error, Connection not allowed:', origin))
     }
   }
 }
