@@ -5,6 +5,7 @@ import userRoutes from './routes/userRoutes.js'
 import projectRoutes from './routes/projectRoutes.js'
 import taskRoutes from './routes/taskRoutes.js'
 import cors from 'cors'
+import logRequests from './middleware/logRequests.js'
 
 // Socket.io
 import { Server } from 'socket.io'
@@ -16,6 +17,8 @@ app.use(express.json()) // Enable json read in request
 dotenv.config() // Access to .env file
 
 connectDB()
+
+app.use(logRequests) // Show all connections sent to backend
 
 // Allowed connections with CORS
 const whitelist = [process.env.FRONTEND_URL]
@@ -37,7 +40,7 @@ app.use('/api/projects', projectRoutes)
 app.use('/api/tasks', taskRoutes)
 
 const server = app.listen(process.env.PORT, () => {
-  // console.log(`Server running in port ${process.env.PORT} :)`)
+  console.log(`Server running in port ${process.env.PORT} :)`)
 })
 
 // Socket.io
